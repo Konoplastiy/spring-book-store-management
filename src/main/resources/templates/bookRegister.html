@@ -34,11 +34,11 @@
         </div>
     </nav>
 
-    <div classname="container my-5 p-5" style="border: 1px solid black;">
+    <div class="container m-5 p-5" style="border: 2px solid black;">
         <h4 class="text-center">New Book Register</h4>
-        <form class="col-md-4 offset-md-4">
+        <form class="col-md-4 offset-md-4" th:action="@{/save}" method="post">
             <div class="mb-3" >
-                <label for="name" class="form-label">Name address</label>
+                <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name = "name">
             </div>
 
@@ -52,7 +52,10 @@
                 <input type="text" class="form-control"id="price" name = "price">
             </div>
 
-            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+            <div class="but d-flex justify-content-center align-items-center" >
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
         </form>
     </div>
 
