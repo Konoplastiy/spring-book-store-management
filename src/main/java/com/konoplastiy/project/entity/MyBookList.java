@@ -1,26 +1,27 @@
 package com.konoplastiy.project.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "Book")
-public class Book {
+@Table(name="MyBooks")
+public class MyBookList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String author;
     private String price;
 
-    public Book(int id, String name, String author, String price) {
+    public MyBookList(int id, String name, String author, String price) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.price = price;
     }
 
-    public Book() {
+    public MyBookList() {
     }
 
     public int getId() {
@@ -57,7 +58,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "MyBookList{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
