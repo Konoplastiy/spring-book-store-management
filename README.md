@@ -1,6 +1,6 @@
 # Book Store Manageement
 
-### Technology: Java 17, Spring (Web, Data JPA), Docker, REST API, PostgreSQL, Thymeleaf, HTML/CSS
+### Technology: Java 17, Spring (Boot, Data JPA), Docker, REST API, PostgreSQL, Thymeleaf, HTML/CSS
 
 ### Description
 
