@@ -2,20 +2,16 @@ package com.konoplastiy.project.service;
 
 import com.konoplastiy.project.entity.MyBookList;
 import com.konoplastiy.project.repository.MyBookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class MyBookListService {
 
-    private MyBookRepository myBookRepository;
-
-    @Autowired
-    public MyBookListService(MyBookRepository myBookRepository) {
-        this.myBookRepository = myBookRepository;
-    }
+    private final MyBookRepository myBookRepository;
 
     public void saveMyBooks(MyBookList book) {
         myBookRepository.save(book);

@@ -4,6 +4,7 @@ import com.konoplastiy.project.entity.Book;
 import com.konoplastiy.project.entity.MyBookList;
 import com.konoplastiy.project.service.BookService;
 import com.konoplastiy.project.service.MyBookListService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,16 +15,11 @@ import java.util.*;
 
 
 @Controller
+@AllArgsConstructor
 public class BookController {
 
-    private BookService bookService;
-    private MyBookListService myBookListService;
-
-    @Autowired
-    public BookController(BookService bookService, MyBookListService myBookListService) {
-        this.bookService = bookService;
-        this.myBookListService = myBookListService;
-    }
+    private final BookService bookService;
+    private final MyBookListService myBookListService;
 
     @GetMapping("/")
     public String home() {
